@@ -8,11 +8,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ChatComponent } from './componentes/chat/chat.component';
+
 
 /// firebase configuraciones
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment.prod';
-import {AngularFirestoreModule } from '@angular/fire/firestore';
+import {AngularFirestoreModule, SETTINGS } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 
@@ -20,8 +22,8 @@ import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, ChatComponent],
+  entryComponents: [ChatComponent],
   imports: [BrowserModule, 
             IonicModule.forRoot(),
             AppRoutingModule,
@@ -34,7 +36,9 @@ import { FormsModule } from '@angular/forms';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: SETTINGS, useValue:{}}
+
   ],
   bootstrap: [AppComponent]
 })
