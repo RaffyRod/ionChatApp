@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-button fill="clear" slot="end" (click)="presentActionSheet()">
+      <ion-icon  style="color: #fff; font-size: 25px;" name="menu"></ion-icon>
+    </ion-button>
+    <ion-title>
+      Mi ChatApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">  
+  <ion-list>    
+      <ion-item *ngFor="let chat of chatRooms" (click)="openChat(chat)">
+        <ion-avatar slot="start">
+          <ion-img [src]="chat.img"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h2><b>{{chat.name}}</b></h2>          
+          <p>{{chat.description}}</p>
+        </ion-label>
+      </ion-item>      
+  </ion-list>
+<!-- <ion-button color="tertiary" (click)="onLogOut()">Desconectarse</ion-button>-->  
+ 
+</ion-content>
