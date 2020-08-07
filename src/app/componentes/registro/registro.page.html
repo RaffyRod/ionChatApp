@@ -6,6 +6,12 @@
 
 <ion-content>
   <img class="icon" src="assets\img\registry.svg" alt="">
+
+  <ion-item class="field">
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" id="name" name="name" [(ngModel)]="name"></ion-input>
+  </ion-item>
+
   <ion-item class="field">
     <ion-label position="floating">Correo Electronico</ion-label>
     <ion-input type="text" id="email" name="email" [(ngModel)]="email"></ion-input>

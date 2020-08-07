@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../servicios/auth.service';
 import { rejects } from 'assert';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -11,14 +13,16 @@ import { rejects } from 'assert';
 export class RegistroPage implements OnInit {
   public email: string;
   public password: string;
+  public name: string;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,
+              private router: Router) { }
 
   ngOnInit() {
   }
   onSubmitRegister(){
-    this.authService.register(this.email, this.password).then( auth => {
-      console.log(auth)
+    this.authService.register(this.email, this.password, this.name).then( auth => {
+      this.router.navigate(['/home']);
     }).catch(err => console.log(err));
   }
 

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAA;EACP,YAAY,CAAA,QAAC;CAChB",
+    "mappings": "AAAA,AAAA,WAAW,CAAA;EACP,YAAY,CAAA,QAAC;CAChB;;AAED,AAAA,QAAQ,CAAA;EACJ,YAAY,CAAA,MAAC;CAChB",
     "sources": [
         "chat.component.scss"
     ],
