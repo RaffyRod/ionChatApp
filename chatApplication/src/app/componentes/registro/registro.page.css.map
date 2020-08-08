@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,KAAK,EAAE,GAAG;EACV,OAAO,EAAC,KAAK;EACb,MAAM,EAAC,SAAS;CACnB;;AACD,AAAA,MAAM,CAAA;EACF,MAAM,EAAE,QAAQ;CACnB",
-    "sources": [
-        "registro.page.scss"
-    ],
-    "names": [],
-    "file": "registro.page.css"
-}

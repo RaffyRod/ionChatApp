@@ -12,8 +12,7 @@ import { ChatsService } from '../../servicios/chats.service';
 })
 export class ChatComponent implements OnInit {
   public chat : any;
-  public mensajes = [];
-  //public message : Message; 
+  public mensajes = [];  
   public room : any;
   public msg : string;
 
@@ -33,13 +32,13 @@ export class ChatComponent implements OnInit {
     this.modalCtrl.dismiss();
   }
   sendMessage(){
-   // this.mensajes.push(this.message); 
-   const mensaje : Message = {
+      const mensaje : Message = {
          content: this.msg,
          type : 'text',
          date : new Date()
    } 
    this.chatService.sendMsgToFirebase( mensaje, this.chat.id);  
+   this.msg = "";
   }
 
 }
